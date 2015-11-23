@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8945DCBD1C03AE8300E04552 /* libLeap.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 898A421E1C03A46800AF13B2 /* libLeap.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		898A42171C03A33900AF13B2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 898A42161C03A33900AF13B2 /* main.cpp */; };
+		898A421F1C03A46800AF13B2 /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 898A421E1C03A46800AF13B2 /* libLeap.dylib */; settings = {ASSET_TAGS = (); }; };
+		898A42211C03A48A00AF13B2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898A42201C03A48A00AF13B2 /* Cocoa.framework */; };
+		898A42231C03A49900AF13B2 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898A42221C03A49900AF13B2 /* GLUT.framework */; };
+		898A42251C03A4A300AF13B2 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898A42241C03A4A300AF13B2 /* OpenGL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,11 +25,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		898A421D1C03A42500AF13B2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				8945DCBD1C03AE8300E04552 /* libLeap.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		898A42131C03A33900AF13B2 /* LeapSv */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeapSv; sourceTree = BUILT_PRODUCTS_DIR; };
 		898A42161C03A33900AF13B2 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		898A421E1C03A46800AF13B2 /* libLeap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libLeap.dylib; path = LeapSDK/lib/libLeap.dylib; sourceTree = "<group>"; };
+		898A42201C03A48A00AF13B2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		898A42221C03A49900AF13B2 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		898A42241C03A4A300AF13B2 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +51,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				898A42251C03A4A300AF13B2 /* OpenGL.framework in Frameworks */,
+				898A42231C03A49900AF13B2 /* GLUT.framework in Frameworks */,
+				898A42211C03A48A00AF13B2 /* Cocoa.framework in Frameworks */,
+				898A421F1C03A46800AF13B2 /* libLeap.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +64,10 @@
 		898A420A1C03A33900AF13B2 = {
 			isa = PBXGroup;
 			children = (
+				898A42241C03A4A300AF13B2 /* OpenGL.framework */,
+				898A42221C03A49900AF13B2 /* GLUT.framework */,
+				898A42201C03A48A00AF13B2 /* Cocoa.framework */,
+				898A421E1C03A46800AF13B2 /* libLeap.dylib */,
 				898A42151C03A33900AF13B2 /* LeapSv */,
 				898A42141C03A33900AF13B2 /* Products */,
 			);
@@ -72,6 +99,7 @@
 				898A420F1C03A33900AF13B2 /* Sources */,
 				898A42101C03A33900AF13B2 /* Frameworks */,
 				898A42111C03A33900AF13B2 /* CopyFiles */,
+				898A421D1C03A42500AF13B2 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -160,6 +188,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = LeapSDK/include;
+				LIBRARY_SEARCH_PATHS = LeapSDK/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -196,6 +226,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = LeapSDK/include;
+				LIBRARY_SEARCH_PATHS = LeapSDK/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
@@ -205,6 +237,8 @@
 		898A421B1C03A33900AF13B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/LeapSDK/lib";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -212,6 +246,8 @@
 		898A421C1C03A33900AF13B2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/LeapSDK/lib";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -235,6 +271,7 @@
 				898A421C1C03A33900AF13B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
